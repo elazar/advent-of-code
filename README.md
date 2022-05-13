@@ -21,6 +21,8 @@ languages reasonably well. Wish me luck!
 
 If you have any questions, discussion, or other feedback, feel free to [file an issue](https://github.com/elazar/advent-of-code/issues).
 
+If it relates to one or more specific exercises, please include the year(s), day(s), part(s), and language(s).
+
 # License
 
 All code in this repository is licensed under the [MIT License](https://opensource.org/licenses/MIT).
