@@ -1,3 +1,7 @@
+# 2022-05-14
+
+- Finished 2015 Day 4 Parts 1 and 2.
+
 # 2022-05-13
 
 - Finished 2015 Day 1 Part 2.
