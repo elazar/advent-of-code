@@ -3,6 +3,7 @@
 - Finished 2015 Day 1 Part 2.
 - Reimplemented 2015 Day 1 Part 1 using learnings from Day 2 Part 2.
   - Follow-up: figure out why `apply-seq` includes a last element of `nil`.
+- Finished 2015 Day 2 Parts 1 and 2.
 
 # 2022-05-11
 
