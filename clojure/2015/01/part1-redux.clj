@@ -10,26 +10,12 @@
   )
 )
 
-(defn apply-seq
-  [s f]
-  (if (not-empty s)
-    (cons
-      (apply f [(first s)])
-      (lazy-seq (apply-seq (rest s) f))
-    )
-    ()
-  )
-)
-
 (with-open [r (clojure.java.io/reader "input.txt")]
   (println
     (reduce +
-      (apply-seq
-        (char-seq r)
-        ; The default case here shouldn't be necessary given the input, but the
-        ; sequence returned by apply-seq includes a last element of nil and I
-        ; haven't been able to figure out why yet.
+      (map
         (fn [c] (case (str c) "(" 1 ")" -1 0))
+        (char-seq r)
       )
     )
   )

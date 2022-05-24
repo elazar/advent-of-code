@@ -10,20 +10,12 @@
   )
 )
 
-(defn apply-seq
-  [s f]
-  (cons
-    (apply f [(first s)])
-    (lazy-seq (apply-seq (rest s) f))
-  )
-)
-
 (defn take-until-seq
   ([s f] (take-until-seq s f []))
   ([s f c] 
     (let [nc (conj c (first s))]
       (if
-        (apply f [c])
+        (f c)
         c
         (take-until-seq (rest s) f nc)
       )
@@ -35,9 +27,9 @@
   (println
     (count
       (take-until-seq
-        (apply-seq
-          (char-seq r)
+        (map
           (fn [c] (if (= (compare (str c) "(") 0) 1 -1))
+          (char-seq r)
         )
         (fn [c] (< (reduce + c) 0))
       )
